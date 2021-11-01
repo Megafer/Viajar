@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>Viajes 2021</title>
+  <link rel="stylesheet" href="styles/index.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- Video Source -->
+  <!-- https://www.pexels.com/video/aerial-view-of-beautiful-resort-2169880/ -->
+  <section class="showcase">
+    <header>
+      <h2 class="logo">Viaja</h2>
+      <div class="toggle"></div>
+    </header>
+    <video src="https://traversymedia.com/downloads/video.mov" muted loop autoplay></video>
+    <div class="overlay"></div>
+    <div class="text">
+      <h2>Nunca pares de</h2> 
+      <h3>Viajar por el Mundo</h3>
+      <p>No hay nada más lindo que viajar por el mundo, por eso nosotros te ayudamos a proyectar y llevar a cabo los viajes de tus sueños. Un recorrido por los mejores lugares del mundo te espera, contactanos y te mostramos como llevarlo a cabo.</p>
+      <a href="#">Ingresar</a>
+    </div>
+
+    <div class="text"  id="nosotros">
+      <h3 class="nos">Nosotros</h3>
+      <br>
+      <article class="art">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. uo ipsum nemo, dicta ullam ab iste. Fuga sit in modi similique veniam corrupti! Illo voluptatem quibusdam fugit eveniet voluptatum? Dignissimos quaerat alias minus! Expedita adipisci enim quaerat, deserunt modi minima iste sunt perferendis animi quos perspiciatis aliquam odit minus voluptates culpa illo porro eaque ipsa quasi accusantium ipsum autem consequatur possimus impedit. Nihil dolorem blanditiis quidem autem neque porro incidunt? Est doloremque maxime fuga vero illo velit reprehenderit modi aspernatur accusamus provident, <br>
+        eum autem dolores natus quos hic exercitationem laboriosam.</p>
+      </article>
+    </div>
+        
+    <div class="text" id="destinos">
+      <h3>Destinos</h3>
+      </div>
+    <div class="card">
+      <p>Aca vemos a detallar el destino que tenemos para ofrecerte a un excelente lugar del mundo.</p>
+    </div>
+    <br>
+    <div class="card">
+      <p>Aca vemos a detallar el destino que tenemos para ofrecerte a un excelente lugar del mundo.</p>
+    </div>
+    <br>
+    <div class="card">
+      <p>Aca vemos a detallar el destino que tenemos para ofrecerte a un excelente lugar del mundo.</p>
+    </div>
+    <br>
+    <div class="card">
+      <p>Aca vemos a detallar el destino que tenemos para ofrecerte a un excelente lugar del mundo.</p>
+    </div>
+    <br>
+    <div class="text" id="blog">
+      <h3>Blog</h3>
+    </div>
+    <div class="blog">
+      <p>Roma : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus quos odit maiores enim in officiis?</p>
+      <br>
+      <p>EEUU : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus quos odit maiores enim in officiis?</p>
+      <br>
+      <p>España : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus quos odit maiores enim in officiis?</p>
+    </div>
+    <br>
+
+    <div class="text" id="contacto">
+      <h3>Contacto</h3>
+    </div>
+    <br>
+<!-- Aqui irá nuestro formulario -->
+<section class="final">
+  <form id="form" action="enviar.php" method="post" name="form1" enctype="multipart/form-data">
+      <h3 class="form" id="">Formulario de Contacto:</h3>
+      <label for="nombre">Nombre:</label>
+      <input id="nombre" name="nombre" placeholder="Nombre completo" required>
+      <label for="email">Email:</label>
+      <input id="email" name="email" type="email" placeholder="Su mail" required>
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Deje aqui su mensaje..."></textarea>
+      <input id="submit" name="submit" type="submit" value="Enviar">
+  </form>
+  </section>
+
+    <br>
+    <ul class="social">
+      <li><a href="#home"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+      <li><a href="#home"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+      <li><a href="#home"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+    </ul>
+  </section>
+  <div class="menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#destinos">Destinos</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+
+  <section>
+   
+  </section>
+  <a href="#" id="js_up" class="boton-subir">
+    <!-- link del icono http://fontawesome.io/icon/rocket/ -->
+     <i class="fa fa-rocket" aria-hidden="true"></i>
+  </a>
+
+<!-- script para que funcione al 100% el botón ir arriba -->
+<script>
+    //invocamos al objeto (window) y a su método (scroll), solo se ejecutara si el usuario hace scroll en la página
+    $(window).scroll(function(){
+      if($(this).scrollTop() > 300){ //condición a cumplirse cuando el usuario aya bajado 301px a más.
+        $("#js_up").slideDown(300); //se muestra el botón en 300 mili segundos
+      }else{ // si no
+        $("#js_up").slideUp(300); //se oculta el botón en 300 mili segundos
+      }
+    });
+    
+    //creamos una función accediendo a la etiqueta i en su evento click
+    $("#js_up i").on('click', function (e) { 
+      e.preventDefault(); //evita que se ejecute el tag ancla (<a href="#">valor</a>).
+      $("body,html").animate({ // aplicamos la función animate a los tags body y html
+        scrollTop: 0 //al colocar el valor 0 a scrollTop me volverá a la parte inicial de la página
+      },10); //el valor 700 indica que lo ara en 700 mili segundos
+      return false; //rompe el bucle
+    });
+    </script>
+
+<!-- Aca Script -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
