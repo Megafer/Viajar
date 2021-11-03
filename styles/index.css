@@ -219,7 +219,7 @@ header .logo
 .blog {
   width: 100%;
   /* background-color:white; */
-  height: 300px;
+  height: auto;
   background: #bdf0fa; 
   color: #0c92ac;
   padding: 6px;
